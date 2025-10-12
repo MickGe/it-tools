@@ -34,7 +34,7 @@
     "lint": "eslint src --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore",
     "script:create:tool": "node scripts/create-tool.mjs",
     "script:create:ui": "hygen generator ui-component",
-    "release": "node ./scripts/release.mjs",
+    "release": "release-it",
     "script:extract:desc": "node ./scripts/extract-tools-desc.mjs",
     "script:extract:strings": "node ./scripts/extract-tools-strings.mjs",
     "vue-i18n-extract": "vue-i18n-extract report --vueFiles 'src/**/*.?(ts|vue)' --languageFiles 'locales/*.yml'"
@@ -346,9 +346,11 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.41.0",
+    "@csmith/release-it-calver-plugin": "^2023.12.0",
     "@iconify-json/mdi": "^1.1.50",
     "@intlify/unplugin-vue-i18n": "^6.0.8",
     "@playwright/test": "^1.54.1",
+    "@release-it/conventional-changelog": "^10.0.1",
     "@rushstack/eslint-patch": "^1.2.0",
     "@tsconfig/node18": "^18.2.0",
     "@types/arr-diff": "^4.0.3",
@@ -403,6 +405,7 @@
     "jsdom": "^22.0.0",
     "less": "^4.2.2",
     "prettier": "^3.0.0",
+    "release-it": "^17.11.0",
     "semver": "^7.5.2",
     "typescript": "~5.2.2",
     "unocss": "^0.57.1",
